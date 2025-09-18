@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>💰 Expense Tracker</h2>
+
+    <form id="transaction-form">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount (+income, -expense)" required>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    
+    <div class="summary">
+      <h3>Total Balance: ₹<span id="balance">0</span></h3>
+      <div class="income-expense">
+        <p>Income: ₹<span id="income">0</span></p>
+        <p>Expense: ₹<span id="expense">0</span></p>
+      </div>
+    </div>
+
+    
+    <div id="chart-container">
+      <canvas id="expenseChart"></canvas>
+    </div>
+
+    
+    <ul id="transaction-list">
+      
+    </ul>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
